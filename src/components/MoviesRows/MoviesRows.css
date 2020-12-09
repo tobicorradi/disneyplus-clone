@@ -1,0 +1,8 @@
+.moviesRows {
+  margin-top: 20px;
+}
+@media (min-width: 768px) {
+  .moviesRows {
+    margin-top: 43px;
+  }
+}

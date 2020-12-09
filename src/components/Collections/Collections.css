@@ -1,0 +1,13 @@
+.collections {
+  margin: 0 -8px;
+}
+@media (min-width: 768px) {
+  .collections {
+    margin: 25px 0;
+  }
+  .collections .slider {
+    display: flex;
+    justify-content: center;
+    margin: 0 -12px;
+  }
+}

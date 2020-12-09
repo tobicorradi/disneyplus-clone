@@ -1,0 +1,154 @@
+.detailPage {
+  background: rgb(36, 38, 56);
+  background: linear-gradient(
+    180deg,
+    rgba(36, 38, 56, 1) 0%,
+    rgba(25, 27, 41, 1) 100%
+  );
+}
+.detailPage__background {
+  position: relative;
+}
+.detailPage__background > img {
+  width: 100%;
+}
+.brandPage__image > img {
+  max-width: 25vw;
+}
+.detailPage__overlay {
+  background-image: radial-gradient(
+    farthest-side at 73% 21%,
+    transparent,
+    rgb(33 35 51)
+  );
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 2;
+}
+.detailPage__title {
+  color: #f9f9f9;
+  font-size: 30px;
+  margin-bottom: 25px;
+}
+.detaiPage__buttons button {
+  margin-right: 18px;
+}
+button.detailPage__playBtn {
+  background: white;
+  font-weight: 700;
+  border-radius: 2px;
+}
+button.detailPage__playBtn,
+button.detailPage__trailerBtn {
+  padding: 13px 20px;
+  width: 100%;
+  margin-bottom: 14px;
+}
+button.detailPage__trailerBtn,
+button.detailPage_radialBtn {
+  border: 2px solid #f9f9f9;
+  background: black;
+  color: white;
+}
+button.detailPage_radialBtn {
+  padding: 7px;
+}
+
+.detailPage__info {
+  padding: 12px 20px;
+  color: white;
+  position: relative;
+}
+.detailPage__description {
+  max-width: 800px;
+  line-height: 26px;
+  font-size: 15px;
+}
+.detailPage__data {
+  margin: 17px 0 10px 0;
+  font-size: 13px;
+}
+.detailPage__data span:not(:last-child)::after {
+  content: "•";
+  margin: 0 8px;
+}
+.detailPage__tabsHeader {
+  background: transparent !important;
+  box-shadow: 0 0 black !important;
+  align-items: baseline !important;
+  padding-left: 0 !important;
+  border-bottom: 2px solid rgba(249, 249, 249, 0.2);
+  padding-bottom: 0;
+}
+.tab__title {
+  margin-bottom: 12px;
+}
+.tab__description {
+  margin-bottom: 13px;
+}
+.tab__item {
+  margin-bottom: 15px;
+}
+.tab__panel .MuiBox-root {
+  padding-left: 0;
+}
+.tab__subtitle {
+  font-size: 15px;
+  color: rgb(202, 202, 202);
+  font-weight: 100;
+  margin-bottom: 2px;
+}
+.detailPage .PrivateTabIndicator-colorSecondary-3 {
+  background: #ffffff !important;
+}
+@media (min-width: 992px) {
+  .detailPage {
+    height: 100vh;
+    display: flex;
+    background: #1a1d29;
+  }
+  .detailPage__info {
+    align-self: center;
+    padding: 68vh 0 0 90px;
+    width: 100%;
+  }
+  .detailPage__title {
+    font-size: 55px;
+  }
+  .detailPage__description {
+    max-width: 800px;
+    font-size: 17px;
+  }
+  .detailPage__background {
+    position: fixed;
+    width: 100%;
+    z-index: 0;
+  }
+  .detailPage__overlay {
+    background-image: radial-gradient(
+      farthest-side at 73% 21%,
+      transparent,
+      rgb(26, 29, 41)
+    );
+  }
+  button.detailPage__playBtn,
+  button.detailPage__trailerBtn {
+    padding: 13px 20px;
+    width: auto;
+    margin-bottom: 0;
+  }
+  .tab__container {
+    display: flex;
+  }
+  .tab__mainColumn {
+    flex: 0.5;
+  }
+  .tab__itemsColumn {
+    display: flex;
+    justify-content: space-around;
+    flex: 0.3;
+  }
+}

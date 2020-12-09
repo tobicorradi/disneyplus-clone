@@ -1,0 +1,31 @@
+.singleRow {
+  margin-bottom: 30px;
+}
+.singleRow__title {
+  color: #f9f9f9;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.singleRow__slider .slick-slide {
+  padding: 0 5px;
+}
+.singleRow__slider .slick-list {
+  margin: 0 -10px;
+}
+.singleRow__slider .slick-track,
+.singleRow__slider .slick-list {
+  overflow: unset;
+}
+.singleRow button {
+  opacity: 0;
+  transition: opacity 150ms ease-in-out;
+}
+@media (min-width: 768px) {
+  .singleRow__slider .slick-slide {
+    padding: 0 10px;
+  }
+  .singleRow:hover button {
+    opacity: 1;
+    transition: opacity 150ms ease-in-out;
+  }
+}

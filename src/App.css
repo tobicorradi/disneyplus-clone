@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Nunito", sans-serif;
+  box-sizing: border-box;
+}
+:root {
+  --main-shadow: rgba(0, 0, 0, 0.69) 0px 26px 30px -10px,
+    rgba(0, 0, 0, 0.73) 0px 16px 10px -10px;
+  --main-shadow-hover: rgba(0, 0, 0, 0.8) 0px 40px 58px -16px,
+    rgba(0, 0, 0, 0.72) 0px 30px 22px -10px;
+  --card-background: linear-gradient(rgb(48, 50, 62), rgb(30, 31, 42)) 0% 0% /
+    cover;
+}
+a,
+a:hover {
+  text-decoration: none;
+}
+ul li {
+  list-style: none;
+}
+.movieRows__container {
+  margin: 0 auto;
+  padding: 0 30px;
+}
+@media (min-width: 992px) {
+  .moviewRows__container {
+    padding: 0;
+  }
+}
+@media (min-width: 1300px) {
+  .movieRows__container {
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 1700px) {
+  .movieRows__container {
+    max-width: 1700px;
+  }
+}

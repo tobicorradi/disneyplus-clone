@@ -1,0 +1,38 @@
+body {
+  /* background: #1b1e2a; */
+  background: #191b2a;
+}
+.home__container {
+  margin: 0 auto;
+  padding: 0 30px;
+}
+#root {
+  overflow-x: hidden;
+}
+.slick-list {
+  overflow: unset;
+}
+@media (min-width: 992px) {
+  body {
+    background: url("https://prod-static.disney-plus.net/us-west-2/builds/e76798ab2a732a884562763cbd19b969a80dcd5b_1606148151180/node_modules/dss-junglebook/components/themes/images/background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-font-smoothing: antialiased;
+  }
+  .home {
+    margin-top: 94px;
+  }
+  .home__container {
+    padding: 0;
+  }
+}
+@media (min-width: 1300px) {
+  .home__container {
+    max-width: 1300px;
+  }
+}
+@media (min-width: 1700px) {
+  .home__container {
+    max-width: 1700px;
+  }
+}

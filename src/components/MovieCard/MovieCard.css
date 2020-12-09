@@ -1,0 +1,34 @@
+.movieCard {
+  max-width: 340px;
+  border-radius: 10px;
+  box-shadow: var(--main-shadow);
+  transform: scale(1);
+  transition: all 250ms ease-in-out;
+  position: relative;
+}
+.movieCard__poster {
+  max-width: 100%;
+  width: 100%;
+  border-radius: 4px;
+}
+.movieCard * {
+  border-radius: 4px;
+}
+span.movieCard__title {
+  position: absolute;
+  right: 0;
+  left: 21px;
+  bottom: 12px;
+  color: white;
+  font-size: 9px;
+}
+.movieCard:hover {
+  transform: scale(1.08);
+  transition: all 250ms ease-in-out;
+  box-shadow: var(--main-shadow-hover);
+}
+@media (min-width: 992px) {
+  span.movieCard__title {
+    font-size: 18px;
+  }
+}

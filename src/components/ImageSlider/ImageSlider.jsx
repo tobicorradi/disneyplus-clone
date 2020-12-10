@@ -6,11 +6,11 @@ import "./ImageSlider.css";
 const imageSlider = () => {
   const config = {
     dots: true,
-    // arrows: true,
     accessibility: true,
     infinite: true,
     autoplay: true,
-    speed: 500,
+    autoplaySpeed: 6000,
+    speed: 700,
     centerMode: false,
     slidesToShow: 1,
     slidesToScroll: 1,

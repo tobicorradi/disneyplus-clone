@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import Home from "./components/Home";
 import DetailPage from "./components/DetailPage";
 import BrandPage from "./components/BrandPage";
+import SearchPage from './components/SearchPage'
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import "./App.css";
@@ -18,6 +19,10 @@ const App = () => {
           <Route path="/play/:movieId">
             <Header className="headerTransparent" />
             <DetailPage />
+          </Route>
+          <Route path="/search">
+            <Header />
+            <SearchPage />
           </Route>
           <Route path="/">
             <Header />

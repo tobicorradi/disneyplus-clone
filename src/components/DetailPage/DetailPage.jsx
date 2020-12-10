@@ -10,8 +10,10 @@ import AppBar from "@material-ui/core/AppBar";
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 import Box from "@material-ui/core/Box";
-import { Link, withRouter } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 import axios from "../../axios";
+import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
+import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./DetailPage.css";
@@ -27,6 +29,8 @@ const DetailPage = (props) => {
     speed: 500,
     slidesToShow: 5,
     slidesToScroll: 1,
+    nextArrow: <ArrowForwardIosIcon />,
+    prevArrow: <ArrowBackIosIcon />,
     responsive: [
       {
         breakpoint: 1024,
@@ -150,13 +154,12 @@ const DetailPage = (props) => {
             <TabPanel className="tab__panel" value={value} index={0}>
               <Slider className="singleRow__slider" {...config}>
                 {recommended.map((recommendedMovie) => (
-                  <Link to={`/play/${recommendedMovie.id}`}>
-                    <MovieCard
-                      key={recommendedMovie.id}
-                      title={recommendedMovie.title}
-                      poster={recommendedMovie.backdrop_path}
-                    />
-                  </Link>
+                  <MovieCard
+                    id={recommendedMovie.id}
+                    key={recommendedMovie.id}
+                    title={recommendedMovie.title}
+                    poster={recommendedMovie.backdrop_path}
+                  />
                 ))}
               </Slider>
             </TabPanel>

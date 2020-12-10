@@ -19,6 +19,49 @@
 .singleRow button {
   opacity: 0;
   transition: opacity 150ms ease-in-out;
+  z-index: 3;
+}
+.slick-arrow {
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+.singleRow:hover .slick-arrow {
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+.slick-arrow.slick-next {
+  right: -50px;
+}
+.slick-prev:hover,
+.slick-prev:focus,
+.slick-next:hover,
+.slick-next:focus {
+  color: white;
+}
+.slick-next:before,
+.slick-prev:before {
+  display: none;
+}
+button.slick-arrow.slick-next {
+  height: 100%;
+  width: 125px;
+  right: -131px;
+}
+button.slick-arrow.slick-prev {
+  height: 100%;
+  width: 125px;
+  left: -144px;
+}
+.slick-slide[aria-hidden="true"] .movieCard .movieCard__container::before {
+  content: "";
+  background: linear-gradient(rgb(48, 50, 62), rgb(30, 31, 42)) 0% 0% / cover;
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  opacity: 0.6;
+  border-radius: 4px;
 }
 @media (min-width: 768px) {
   .singleRow__slider .slick-slide {

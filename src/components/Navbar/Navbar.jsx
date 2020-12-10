@@ -16,7 +16,7 @@ const Navbar = () => {
     <nav class="navbar">
       <MenuIcon className="navbar__menuIcon" />
       <Link to="/">
-        <Logo/>
+        <Logo />
       </Link>
       <ul class="navbar__list">
         <li className="navbar__buttonWrapper">
@@ -25,9 +25,11 @@ const Navbar = () => {
           </Button>
         </li>
         <li className="navbar__buttonWrapper">
-          <Button className="navbar__button" startIcon={<SearchIcon />}>
-            Search
-          </Button>
+          <Link to="/search">
+            <Button className="navbar__button" startIcon={<SearchIcon />}>
+              Search
+            </Button>
+          </Link>
         </li>
         <li className="navbar__buttonWrapper">
           <Button className="navbar__button" startIcon={<AddIcon />}>

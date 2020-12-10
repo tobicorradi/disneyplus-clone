@@ -1,0 +1,66 @@
+.searchPage__gallery {
+  margin-top: 125px;
+}
+.searchPage__container {
+  display: flex;
+  flex-flow: wrap;
+  margin-right: -20px;
+}
+.searchPage__searchBar {
+  background: linear-gradient(
+    180deg,
+    rgba(51, 53, 61, 1) 0%,
+    rgba(75, 78, 90, 1) 100%
+  );
+  color: #f9f9f9;
+  width: 100%;
+  height: 79px;
+  font-weight: 800;
+  font-size: 30px;
+  padding-left: 30px;
+  border: 0;
+  position: fixed;
+  left: 0;
+  right: 0;
+  transition: all 0.3s ease-in-out;
+  top: 94px;
+  z-index: 1;
+}
+::placeholder {
+  color: #f9f9f9;
+}
+.searchPage__searchBar:focus {
+  background: linear-gradient(
+    180deg,
+    rgba(51, 53, 61, 1) 0%,
+    rgb(120, 125, 144) 100%
+  );
+  outline: 0;
+  transition: all 0.3s ease-in-out;
+}
+.searchPage .movieCard {
+  margin: 0 20px 20px 0px;
+  width: calc(50% - 20px);
+}
+.searchPage h2{
+  color: red;
+}
+@media (min-width: 768px) {
+  .searchPage .movieCard {
+    width: calc(33.3% - 20px);
+  }
+}
+@media (min-width: 992px) {
+  .searchPage {
+    margin-top: 94px;
+  }
+  .searchPage__searchBar {
+    height: 100px;
+  }
+  .searchPage .movieCard {
+    width: calc(20% - 20px);
+  }
+  .searchPage__gallery {
+    margin-top: 235px;
+  }
+}

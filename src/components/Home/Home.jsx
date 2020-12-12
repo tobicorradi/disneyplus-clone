@@ -5,7 +5,7 @@ import MoviesRows from "../MoviesRows";
 import "./Home.css";
 const Home = () => {
   return (
-    <main class="home">
+    <main className="home">
       <ImageSlider />
       <div className="home__container movieRows__container">
         <Collections />

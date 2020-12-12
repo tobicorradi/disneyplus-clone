@@ -14,88 +14,49 @@ import { withRouter } from "react-router-dom";
 import axios from "../../axios";
 import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
 import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
+import { apiKey, sliderConfig } from "../../Utilities";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./DetailPage.css";
+import "../SingleRow/SingleRow.css";
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
   return <div {...other}>{value === index && <Box p={3}>{children}</Box>}</div>;
 }
 const DetailPage = (props) => {
-  const config = {
-    arrows: true,
-    accessibility: true,
-    infinite: false,
-    speed: 500,
-    slidesToShow: 5,
-    slidesToScroll: 1,
-    nextArrow: <ArrowForwardIosIcon />,
-    prevArrow: <ArrowBackIosIcon />,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
-          infinite: true,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          initialSlide: 2,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          infinite: true,
-        },
-      },
-    ],
-  };
   const movieId = props.match.params.movieId;
   const [singleMovie, setSingleMovie] = useState([""]);
   const [recommended, setRecommended] = useState([""]);
-  const [director, setDirector] = useState([""]);
+  const [videos, setVideos] = useState([""]);
   const [cast, setCast] = useState([""]);
-  const [genres, setGenres] = useState([""]);
-
+  const [value, setValue] = useState(0);
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
   useEffect(() => {
+    window.scrollTo(0, 0);
     axios
-      .get(`movie/${movieId}?api_key=b9e91fb0399084749f4ee7ea4fdad27a`)
+      .get(`movie/${movieId}?api_key=${apiKey}&append_to_response=videos`)
       .then((response) => {
         const { data } = response;
         setSingleMovie(data);
+        setVideos(data.videos.results);
       });
     axios
       .get(
-        `movie/${movieId}/recommendations?api_key=b9e91fb0399084749f4ee7ea4fdad27a&language=en-US&page=1`
+        `movie/${movieId}/recommendations?api_key=${apiKey}&language=en-US&page=1`
       )
       .then((response) => {
         const { data } = response;
         setRecommended(data.results);
       });
     axios
-      .get(
-        `movie/${movieId}/credits?api_key=b9e91fb0399084749f4ee7ea4fdad27a&language=en-US`
-      )
+      .get(`movie/${movieId}/credits?api_key=${apiKey}&language=en-US`)
       .then((response) => {
         const { data } = response;
         setCast(data.cast);
-        setDirector(data.crew);
       });
   }, [movieId]);
-  console.log(director);
-  const [value, setValue] = useState(0);
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
   return (
     <>
       <main className="detailPage">
@@ -152,7 +113,10 @@ const DetailPage = (props) => {
               </Tabs>
             </AppBar>
             <TabPanel className="tab__panel" value={value} index={0}>
-              <Slider className="singleRow__slider" {...config}>
+              <Slider
+                className="singleRow singleRow__slider singleRow__recommendedSlider"
+                {...sliderConfig}
+              >
                 {recommended.map((recommendedMovie) => (
                   <MovieCard
                     id={recommendedMovie.id}
@@ -164,7 +128,25 @@ const DetailPage = (props) => {
               </Slider>
             </TabPanel>
             <TabPanel className="tab__panel" value={value} index={1}>
-              Item Two
+              {videos.length > 0 ? (
+                <Slider
+                  className="singleRow singleRow__slider singleRow__recommendedSlider youtubeVideos"
+                  {...sliderConfig}
+                >
+                  {videos.slice(0, 8).map((video) => (
+                    <iframe
+                      width="560"
+                      height="315"
+                      src={`https://www.youtube.com/embed/${video.key}`}
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen
+                    ></iframe>
+                  ))}
+                </Slider>
+              ) : (
+                <p>There isn´t extra content</p>
+              )}
             </TabPanel>
             <TabPanel className="tab__panel" value={value} index={2}>
               <div className="tab__container">
@@ -182,17 +164,13 @@ const DetailPage = (props) => {
                       <h3 className="tab__subtitle">Release Date:</h3>
                       <p>{singleMovie["release_date"]}</p>
                     </div>
+                  </div>
+                  <div className="tab__itemSubColumn">
                     <div className="tab__item">
                       <h3 className="tab__subtitle">Genres:</h3>
                       {Array.isArray(singleMovie.genres) == true
                         ? singleMovie.genres.map((genre) => <p>{genre.name}</p>)
                         : null}
-                    </div>
-                  </div>
-                  <div className="tab__itemSubColumn">
-                    <div className="tab__item">
-                      <h3 className="tab__subtitle">Director:</h3>
-                      <p>director</p>
                     </div>
                     <div className="tab__item">
                       <h3 className="tab__subtitle">Cast:</h3>

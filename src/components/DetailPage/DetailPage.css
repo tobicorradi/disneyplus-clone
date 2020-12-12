@@ -11,6 +11,7 @@
 }
 .detailPage__background > img {
   width: 100%;
+  opacity: 0.5;
 }
 .brandPage__image > img {
   max-width: 25vw;
@@ -40,6 +41,9 @@ button.detailPage__playBtn {
   background: white;
   font-weight: 700;
   border-radius: 2px;
+}
+button.detailPage__playBtn:hover {
+  background: #cbcbcb;
 }
 button.detailPage__playBtn,
 button.detailPage__trailerBtn {
@@ -101,18 +105,29 @@ button.detailPage_radialBtn {
   font-weight: 100;
   margin-bottom: 2px;
 }
-.detailPage .PrivateTabIndicator-colorSecondary-3 {
+.detailPage .MuiTabs-indicator {
   background: #ffffff !important;
+}
+.detailPage__tabsHeader button {
+  font-size: 10px;
+  letter-spacing: 3px;
+}
+.youtubeVideos iframe {
+  height: 112px;
+  border-radius: 6px;
 }
 @media (min-width: 992px) {
   .detailPage {
-    height: 100vh;
     display: flex;
     background: #1a1d29;
   }
+  .detailPage__tabsHeader button {
+    font-size: 17px;
+    letter-spacing: 3px;
+  }
   .detailPage__info {
     align-self: center;
-    padding: 68vh 0 0 90px;
+    padding: 60vh 0 0 90px;
     width: 100%;
   }
   .detailPage__title {
@@ -120,7 +135,8 @@ button.detailPage_radialBtn {
   }
   .detailPage__description {
     max-width: 800px;
-    font-size: 17px;
+    font-size: 19px;
+    line-height: 30px;
   }
   .detailPage__background {
     position: fixed;
@@ -150,5 +166,9 @@ button.detailPage_radialBtn {
     display: flex;
     justify-content: space-around;
     flex: 0.3;
+  }
+  .youtubeVideos iframe {
+    height: 170px;
+    border-radius: 6px;
   }
 }

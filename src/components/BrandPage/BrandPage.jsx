@@ -1,22 +1,25 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { withRouter } from "react-router-dom";
 import SingleRow from "../SingleRow";
 import requests from "../../requests";
 import "./BrandPage.css";
 const BrandPage = (props) => {
   const brand = props.match.params.brand;
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <main className="brandPage">
       <div className="brandPage__background">
         <img alt="" src={`/images/brands/${brand}-bg.jpg`} />
       </div>
       <div className="brandPage__image">
-        {brand != "pixar" ? (
+        {brand !== "pixar" ? (
           <img src={`/images/brands/${brand}.png`} alt="" />
         ) : null}
       </div>
       <div className="brandPage__movies movieRows__container">
-        {brand == "marvel" ? (
+        {brand === "marvel" ? (
           <>
             <SingleRow
               title="Marvel Universe"
@@ -36,7 +39,7 @@ const BrandPage = (props) => {
             />
           </>
         ) : null}
-        {brand == "pixar" ? (
+        {brand === "pixar" ? (
           <>
             <SingleRow
               title="Pixar Movies"
@@ -56,7 +59,7 @@ const BrandPage = (props) => {
             ></SingleRow>
           </>
         ) : null}
-        {brand == "star-wars" ? (
+        {brand === "star-wars" ? (
           <>
             <SingleRow
               title="Star Wars Collection"
@@ -68,7 +71,7 @@ const BrandPage = (props) => {
             ></SingleRow>
           </>
         ) : null}
-        {brand == "disney" ? (
+        {brand === "disney" ? (
           <>
             <SingleRow
               title="Disney Originals"
@@ -84,7 +87,7 @@ const BrandPage = (props) => {
             ></SingleRow>
           </>
         ) : null}
-        {brand == "national-geographic" ? (
+        {brand === "national-geographic" ? (
           <>
             <SingleRow
               title="Movies"

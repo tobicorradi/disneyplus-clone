@@ -9,8 +9,8 @@ const CollectionsCard = ({ image, video }) => {
           className="collectionsCards__video"
           width="320"
           height="240"
-          loop="true"
-          playsinline="true"
+          loop={true}
+          playsInline={true}
           muted
           onMouseOver={(event) => event.target.play()}
           onMouseOut={(event) => event.target.pause()}

@@ -1,7 +1,7 @@
 import React from "react";
 import CollectionsCard from "./../CollectionsCard";
 import Slider from "react-slick";
-import { Link, withRouter } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./Collections.css";
@@ -61,8 +61,9 @@ const Collections = () => {
     <div className="collections">
       <Slider {...config}>
         {cards.map((card) => (
-          <Link to={`/brand/${card.brand}`}>
+          <Link key={card.brand} to={`/brand/${card.brand}`}>
             <CollectionsCard
+              key={card.brand}
               brand={card.brand}
               video={card.video}
               image={card.image}

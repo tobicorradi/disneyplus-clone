@@ -63,6 +63,9 @@ button.slick-arrow.slick-prev {
   opacity: 0.6;
   border-radius: 4px;
 }
+.singleRow__recommendedSlider {
+  max-width: 95%;
+}
 @media (min-width: 768px) {
   .singleRow__slider .slick-slide {
     padding: 0 10px;

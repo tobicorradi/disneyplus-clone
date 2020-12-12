@@ -13,12 +13,12 @@ import { Link, withRouter } from "react-router-dom";
 import "./Navbar.css";
 const Navbar = () => {
   return (
-    <nav class="navbar">
+    <nav className="navbar">
       <MenuIcon className="navbar__menuIcon" />
       <Link to="/">
         <Logo />
       </Link>
-      <ul class="navbar__list">
+      <ul className="navbar__list">
         <li className="navbar__buttonWrapper">
           <Button className="navbar__button" startIcon={<HomeIcon />}>
             Home

@@ -4,7 +4,7 @@ import requests from "../../requests";
 import "./MoviesRows.css";
 const MoviesRows = () => {
   return (
-    <div className="moviesRows">
+    <section className="moviesRows">
       <SingleRow title={"Disney Movies"} fetchUrl={requests.fetchDisney} />
       <SingleRow title={"Star Wars"} fetchUrl={requests.fetchStarWars} />
       <SingleRow title={"Pixar Movies"} fetchUrl={requests.fetchPixar} />
@@ -13,7 +13,7 @@ const MoviesRows = () => {
       <SingleRow title={"Musicales"} fetchUrl={requests.fetchMusicPixar} />
       <SingleRow title={"Documentaries"} fetchUrl={requests.fetchDocumentaries}
       />
-    </div>
+    </section>
   );
 };
 

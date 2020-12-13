@@ -1,25 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import MovieCard from "../MovieCard";
-import axios from "axios";
-import { apiKey } from "../../Utilities";
+import { apiKey } from "../../utils";
+import useSearch from "../../hooks/useSearch";
 import "./SearchPage.css";
-const SearchPage = () => {
-  const [query, setQuery] = useState("");
-  const [searchResults, setSearchResults] = useState([""]);
-  useEffect(() => {
-    if (query != "") {
-      axios
-        .get(
-          `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${query}`
-        )
-        .then((response) => {
-          const { data } = response;
-          setSearchResults(data.results);
-          console.log(data.results);
-        });
-    }
-  }, [query]);
 
+const SearchPage = () => {
+  const { query, searchResults, setQuery } = useSearch(apiKey);
   return (
     <main className="searchPage movieRows__container">
       <section>
@@ -31,7 +17,7 @@ const SearchPage = () => {
         />
         <div className="searchPage__gallery">
           <div className="searchPage__container">
-            {query != ""
+            {query
               ? searchResults.map((result) => (
                   <MovieCard
                     id={result.id}

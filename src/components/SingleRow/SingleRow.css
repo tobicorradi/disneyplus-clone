@@ -66,6 +66,11 @@ button.slick-arrow.slick-prev {
 .singleRow__recommendedSlider {
   max-width: 95%;
 }
+.MuiSkeleton-root {
+  margin-bottom: 30px;
+  background-color: rgb(193 193 193 / 11%) !important;
+  border-radius: 10px;
+}
 @media (min-width: 768px) {
   .singleRow__slider .slick-slide {
     padding: 0 10px;

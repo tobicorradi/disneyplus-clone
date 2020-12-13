@@ -58,7 +58,7 @@ const Collections = () => {
     ],
   };
   return (
-    <div className="collections">
+    <section className="collections">
       <Slider {...config}>
         {cards.map((card) => (
           <Link key={card.brand} to={`/brand/${card.brand}`}>
@@ -71,7 +71,7 @@ const Collections = () => {
           </Link>
         ))}
       </Slider>
-    </div>
+    </section>
   );
 };
 

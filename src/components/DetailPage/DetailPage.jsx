@@ -11,10 +11,8 @@ import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 import Box from "@material-ui/core/Box";
 import { withRouter } from "react-router-dom";
-import axios from "../../axios";
-import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
-import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
-import { apiKey, sliderConfig } from "../../Utilities";
+import { apiKey, sliderConfig } from "../../utils";
+import useDetailPage from "../../hooks/useDetailPage";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./DetailPage.css";
@@ -25,38 +23,14 @@ function TabPanel(props) {
 }
 const DetailPage = (props) => {
   const movieId = props.match.params.movieId;
-  const [singleMovie, setSingleMovie] = useState([""]);
-  const [recommended, setRecommended] = useState([""]);
-  const [videos, setVideos] = useState([""]);
-  const [cast, setCast] = useState([""]);
-  const [value, setValue] = useState(0);
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
-  useEffect(() => {
-    window.scrollTo(0, 0);
-    axios
-      .get(`movie/${movieId}?api_key=${apiKey}&append_to_response=videos`)
-      .then((response) => {
-        const { data } = response;
-        setSingleMovie(data);
-        setVideos(data.videos.results);
-      });
-    axios
-      .get(
-        `movie/${movieId}/recommendations?api_key=${apiKey}&language=en-US&page=1`
-      )
-      .then((response) => {
-        const { data } = response;
-        setRecommended(data.results);
-      });
-    axios
-      .get(`movie/${movieId}/credits?api_key=${apiKey}&language=en-US`)
-      .then((response) => {
-        const { data } = response;
-        setCast(data.cast);
-      });
-  }, [movieId]);
+  const [value, setValue] = useState(0);
+  const { singleMovie, recommended, videos, cast } = useDetailPage(
+    movieId,
+    apiKey
+  );
   return (
     <>
       <main className="detailPage">

@@ -1,5 +1,11 @@
+<!--
+  Title: Disney+ React Clone
+  Description: A curated list of amazingly awesome open source sysadmin resources.
+  Author: n1trux
+  -->
+  
 # Disney+ Front End clone made with React JS (in development)
-H! This a Disney+ front end clone that i´m developing using ReactJS.  
+H! This a Disney+ front end clone that i´ve built using ReactJS.  
 __You can visit the website clicking [here!](https://disneyplus-clone-f8077.web.app/)__
 ##### I dont own any rights from Disney as a company, this platform was made for educational purposes and to be shown as a piece of portfolio. There are not any commercial or monetary purposes.
 ## Features
@@ -16,8 +22,8 @@ __You can visit the website clicking [here!](https://disneyplus-clone-f8077.web.
 * Firebase
 * Slick Slider
 ## Images
-![alt text](https://www.corraditobias.com.ar/img/work/09/01.jpg)
-![alt text](https://www.corraditobias.com.ar/img/work/09/02.jpg)
-![alt text](https://www.corraditobias.com.ar/img/work/09/03.jpg)
-![alt text](https://www.corraditobias.com.ar/img/work/09/04.jpg)
-![alt text](https://www.corraditobias.com.ar/img/work/09/05.jpg)
+![Home del clon de Disney+ en una Mac en forma de presentación](https://www.corraditobias.com.ar/img/work/09/01.jpg)
+![Clon de Disney+ visitada en un Ipad Pro para visualizar como se presenta el contenido en dicha pantalla](https://www.corraditobias.com.ar/img/work/09/02.jpg)
+![Home del clon de Disney+ en un IPhone 12 para demostrar como se adapta el clon de Disney+ a diferentes dispositivos](https://www.corraditobias.com.ar/img/work/09/03.jpg)
+![Diferentes secciones del clon de Disney+ en el IPad pro](https://www.corraditobias.com.ar/img/work/09/04.jpg)
+![Collage del clon de Disney+ y sus respectivas secciones/pantallas](https://www.corraditobias.com.ar/img/work/09/05.jpg)

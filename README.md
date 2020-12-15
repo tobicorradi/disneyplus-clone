@@ -1,7 +1,7 @@
 <!--
   Title: Disney+ React Clone
   Description: A curated list of amazingly awesome open source sysadmin resources.
-  Author: n1trux
+  Author: tobicorradi
   -->
   
 # Disney+ Front End clone made with React JS (in development)

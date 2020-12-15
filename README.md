@@ -4,7 +4,7 @@
   Author: tobicorradi
   -->
   
-# Disney+ Front End clone made with React JS (in development)
+# Disney+ Front End clone made with React JS
 H! This a Disney+ front end clone that i´ve built using ReactJS.  
 __You can visit the website clicking [here!](https://disneyplus-clone-f8077.web.app/)__
 ##### I dont own any rights from Disney as a company, this platform was made for educational purposes and to be shown as a piece of portfolio. There are not any commercial or monetary purposes.

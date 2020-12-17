@@ -13,7 +13,7 @@
   bottom: 20px;
   margin: 0px;
   padding: 0px;
-  right: 40px;
+  right: 8px;
   width: 100%;
 }
 .slider__container {
@@ -25,8 +25,8 @@
 .imageSlider .slick-list {
   overflow: unset;
 }
-.imageSlider {
-  padding: 0 20px;
+.imageSlider .slick-list {
+  margin: 0 -10px;
 }
 .imageSlider .slick-dots li button::before {
   color: rgb(150, 158, 171);

@@ -1,15 +1,4 @@
 const apiKey = "b9e91fb0399084749f4ee7ea4fdad27a";
-
-// const requests = {
-//   fetchStarWars: `discover/movie?api_key=${apiKey}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_companies=1&=`,
-//   fetchDisney: `discover/movie?api_key=${apiKey}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_companies=6125`,
-//   fetchPixar: `discover/movie?api_key=${apiKey}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_companies=2&with_genres=16`,
-//   fetchMarvel: `discover/movie?api_key=${apiKey}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_companies=420`,
-//   fetchSimpsons: `search/movie?api_key=${apiKey}&query=Simpsons`,
-//   fetchMusicPixar: `discover/movie?api_key=${apiKey}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_companies=2&with_genres=10402`,
-//   fetchDocumentaries: `discover/movie?api_key=${apiKey}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_companies=7521&with_genres=99`,
-//   fetchMarvelPhases: `list/8920?api_key=${apiKey}&language=en-US`,
-// };
 const requests = {
   fetchSimpsons: `list/7067554?api_key=${apiKey}&language=en-US`,
   fetchDisney: `list/5905?api_key=${apiKey}&language=en-US`,
@@ -29,5 +18,6 @@ const requests = {
   fetchUnexpectedHeroes: `list/7067606?api_key=${apiKey}&language=en-US&sort_by=vote_average.asc`,
   fetchStarWars: `list/8136?api_key=${apiKey}&language=en-US`,
   fetchStarWarsLego: `list/7067607?api_key=${apiKey}&language=en-US&sort_by=vote_average.asc`,
+  fetchRandom: `list/7068720?api_key=${apiKey}&language=en-US&sort_by=vote_average.asc`,
 };
 export default requests;

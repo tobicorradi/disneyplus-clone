@@ -11,7 +11,9 @@ const imageSlider = () => {
         {sliderImages.map((image) => (
           <div className="slider__container" key={image.id}>
             <img className="slider__textImage" src={image.textImage} />
-            <img className="slider__img" src={image.url} />
+            <div class="slider__imgContainer">
+              <img className="slider__img" src={image.url} />
+            </div>
           </div>
         ))}
       </Slider>

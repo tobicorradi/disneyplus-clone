@@ -6,8 +6,8 @@ import "./Home.css";
 const Home = () => {
   return (
     <main className="home">
-      <ImageSlider />
       <div className="home__container movieRows__container">
+        <ImageSlider />
         <Collections />
         <MoviesRows />
       </div>

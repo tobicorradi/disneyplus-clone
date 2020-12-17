@@ -24,6 +24,23 @@ ul li {
   margin: 0 auto;
   padding: 0 30px;
 }
+.slick-slide {
+  position: relative;
+}
+.slider__imgContainer {
+  position: relative;
+}
+.slick-slide[aria-hidden="true"] .slider__imgContainer::before {
+  content: "";
+  background: linear-gradient(#30323e, #1e1f2a) 0 0 / cover;
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  opacity: 0.6;
+  border-radius: 4px;
+  z-index: 2;
+}
 @media (min-width: 992px) {
   .moviewRows__container {
     padding: 0;
@@ -37,6 +54,6 @@ ul li {
 }
 @media (min-width: 1700px) {
   .movieRows__container {
-    max-width: 1700px;
+    max-width: 1760px;
   }
 }

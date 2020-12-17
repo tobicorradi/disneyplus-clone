@@ -8,7 +8,7 @@ import useSingleRow from "../../hooks/useSingleRow";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./SingleRow.css";
-const SingleRow = ({ title, fetchUrl }) => {
+const SingleRow = ({ title, fetchUrl, watching }) => {
   const { movies } = useSingleRow(fetchUrl);
   return (
     <>
@@ -22,6 +22,7 @@ const SingleRow = ({ title, fetchUrl }) => {
                 key={movie.id}
                 poster={movie.backdrop_path}
                 title={movie.title}
+                watching={watching}
               />
             ))}
           </Slider>

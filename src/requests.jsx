@@ -1,4 +1,4 @@
-const apiKey = "b9e91fb0399084749f4ee7ea4fdad27a";
+const apiKey = process.env.REACT_APP_API_KEY;
 const requests = {
   fetchSimpsons: `list/7067554?api_key=${apiKey}&language=en-US`,
   fetchDisney: `list/5905?api_key=${apiKey}&language=en-US`,

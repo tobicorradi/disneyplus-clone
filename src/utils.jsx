@@ -1,6 +1,6 @@
 import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
 import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
-export const apiKey = "b9e91fb0399084749f4ee7ea4fdad27a";
+export const apiKey = process.env.REACT_APP_API_KEY;
 export const sliderConfig = {
   arrows: true,
   accessibility: true,

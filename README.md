@@ -13,7 +13,7 @@ __You can visit the website clicking [here!](https://disneyplus-clone-f8077.web.
 * Filter all this movies depending on the producer or saga (Marvel, Starwars, National Geographic etc.)
 * Get details from an specific movie, like casting, runtime, overview, director, release date etc.
 * Get a recommended list of movies depending on the movie that you´ve chosen.
-## installation
+## Installation
 * Clone the repo.
 * Execute *npm install* command
 * Edit the *.env.test* file with your The Movie DB api key.

@@ -10,10 +10,10 @@ const MovieCard = ({ id, title, poster, watching }) => {
     <div className={watching ? "movieCard watching" : "movieCard "}>
       <Link to={`/play/${id}`}>
         <div className="movieCard__container">
-          {poster == null ? (
+          {poster == null && (
             <span className="movieCard__title">{title}</span>
-          ) : null}
-          {watching ? (
+          )}
+          {watching && (
             <>
               <div className="movieCard__progressBar">
                 <div
@@ -34,7 +34,7 @@ const MovieCard = ({ id, title, poster, watching }) => {
                 </div>
               </div>
             </>
-          ) : null}
+          )}
           <img
             className="movieCard__poster"
             src={
